@@ -1,8 +1,3 @@
-Here's a clean and professional `README.md` for your Terraform Weaviate project:
-
----
-
-````markdown
 # 🚀 Terraform EKS Weaviate Deployment
 
 This project automates the deployment of a **Weaviate vector database** onto an existing **Amazon EKS (Elastic Kubernetes Service)** cluster using **Terraform** and **Helm**. It provides a scalable, highly available, and repeatable infrastructure setup that can be reused across environments like `dev`, `staging`, or `prod`.

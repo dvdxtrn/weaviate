@@ -63,7 +63,11 @@ Initial analysis points to **memory corruption or misconfiguration**. The root c
 - **2025-04-26 07:00** – Customer restarted load test after interim stability observed  
 - **2025-04-26 08:12** – Zoom call ended; issue escalated via JIRA and prod Slack channel  
 - **2025-04-26 14:45** – Another shard failure occurs; workaround successfully applied  
-- **2025-04-26 15:45** – Technical team reconvened with R&D to continue RCA
+- **2025-04-19 15:45** – Reconvened on Zoom call with R&D team and attempted to fix module parameter errors from `redis_mgr`  
+- **2025-04-19 19:25** – Deleted both conflicting parameters via `keyvaluestore-cli`; `shard_mgr` errors ceased  
+- **2025-04-19 19:27** – R&D team requested DB restart to purge potential memory corruption  
+- **2025-04-19 20:01** – Database restarted  
+- **2025-04-19 22:00** – Call closed; customer informed that R&D will continue investigation the following morning
 
 ---
 
