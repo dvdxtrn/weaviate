@@ -70,7 +70,31 @@ locals {
 # EKS Cluster and VPC Configuration
 ################################################################################
 
-# (Intentionally omitted for this exercise; assumed provisioned externally)
+# (Intentionally omitted for this exercise;)
+# This section would typically define:
+#  - A VPC with public/private subnets
+#  - An EKS cluster and node group
+#  - IAM roles for Kubernetes control
+#  - NAT gateway and routing
+#
+# To add these resources, you can use the official AWS VPC Terraform module:
+#   https://registry.terraform.io/modules/terraform-aws-modules/vpc/aws/latest
+# Example:
+# module "vpc" {
+#   source  = "terraform-aws-modules/vpc/aws"
+#   name    = var.vpc_name
+#   cidr    = var.vpc_cidr
+#   ... (other required variables)
+# }
+
+# To add these resources, you can use the official AWS EKS Terraform module:
+#   https://registry.terraform.io/modules/terraform-aws-modules/eks/aws/latest
+# Example:
+# module "eks" {
+#   source          = "terraform-aws-modules/eks/aws"
+#   cluster_name    = var.eks_cluster_name
+#   ... (other required variables)
+# }
 
 ################################################################################
 # Kubernetes Namespace for Weaviate
