@@ -1,8 +1,3 @@
-Here is the **full README in Markdown format**, ready to copy and paste directly into your `README.md` file:
-
----
-
-```markdown
 # 🩺 Automated Health Check System
 
 A lightweight, configurable health check system designed to monitor web applications for availability, performance, and subsystem health. Built with production-grade practices using Python, async I/O, and optional Docker containerization.
@@ -25,7 +20,6 @@ A lightweight, configurable health check system designed to monitor web applicat
 ## 📂 Project Structure
 
 ```
-
 health\_check/
 ├── health\_check.py        # Main health check loop
 ├── utils.py               # Logging helper
@@ -34,7 +28,6 @@ health\_check/
 ├── requirements.txt       # Python dependencies
 ├── Dockerfile             # Container config
 └── README.md              # Project documentation
-
 ````
 
 ---
