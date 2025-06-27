@@ -6,7 +6,7 @@ This project automates the deployment of a **Weaviate vector database** on **Ama
 
 ## 📦 What This Project Does
 
-- Connects to an existing EKS cluster via Terraform providers
+- Creates an EKS cluster via Terraform providers
 - Creates a dedicated Kubernetes namespace for Weaviate
 - Deploys Weaviate using the official Helm chart
 - Configures:
