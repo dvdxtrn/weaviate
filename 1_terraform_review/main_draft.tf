@@ -186,7 +186,7 @@ module "weaviate_helm" {
 # Additional Modules and Resources
 ################################################################################
 
-# You may wish to include the following modules based on production needs:
+# Based on production needs:
 # - ALB Ingress Controller for external access
 # - External DNS and Cert Manager for DNS/SSL automation
 # - Prometheus/Grafana for observability
