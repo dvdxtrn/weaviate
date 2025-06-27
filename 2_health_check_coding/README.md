@@ -39,7 +39,7 @@ All settings are controlled via the `.env` or `config.env` file.
 | Variable              | Description                                   | Default       |
 |-----------------------|-----------------------------------------------|---------------|
 | `HEALTH_ENDPOINT`     | Full URL of the health check endpoint         | *(required)*  |
-| `CHECK_INTERVAL`      | Time between checks (in seconds)              | `300`         |
+| `CHECK_INTERVAL`      | Time between checks (in seconds)              | `3`         |
 | `RESPONSE_THRESHOLD`  | Max acceptable response time (in seconds)     | `3.0`         |
 | `RETRIES`             | Number of retry attempts on failure           | `3`           |
 | `RETRY_DELAY`         | Delay between retries (in seconds)            | `2`           |
@@ -47,8 +47,8 @@ All settings are controlled via the `.env` or `config.env` file.
 Example `config.env`:
 
 ```env
-HEALTH_ENDPOINT=https://api.example.com/health
-CHECK_INTERVAL=300
+HEALTH_ENDPOINT=http://localhost:5000/health
+CHECK_INTERVAL=3
 RESPONSE_THRESHOLD=3.0
 RETRIES=3
 RETRY_DELAY=2
