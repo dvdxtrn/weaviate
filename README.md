@@ -35,7 +35,7 @@ I reviewed the provided Terraform code with a focus on:
 
 #### 🧠 Thoughts
 
-I approached the Terraform review exactly as if a new and unfamiliar task was assigned to me to complete as an Principal/Senior Cloud Operations Engineer. This area of expertise was not in my daily usage, so I relied on AI to build on the fundamentals that I understand and sharpen it in the interest of time. If there was no time pressure, I would approach with trial and error method in a testing environment to successfully provision the environment and then begin to refactor, improve, and find the best practices for reliability.
+I approached the Terraform review exactly as if a new and unfamiliar task was assigned to me to complete as an Principal/Senior Cloud Operations Engineer. This area of expertise was not in my daily usage, so I relied on AI to build on the fundamentals that I understand and sharpen it in the interest of time. If time pressure was not a factor, I would approach with trial and error method in a testing environment to successfully provision the environment and then begin to refactor, improve, and find the best practices for reliability.
 
 ---
 
