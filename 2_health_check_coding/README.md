@@ -28,7 +28,7 @@ health\_check/
 ├── requirements.txt       # Python dependencies
 ├── Dockerfile             # Container config
 └── README.md              # Project documentation
-````
+```
 
 ---
 
@@ -52,7 +52,49 @@ CHECK_INTERVAL=300
 RESPONSE_THRESHOLD=3.0
 RETRIES=3
 RETRY_DELAY=2
-````
+```
+
+---
+
+## 🧪 Local Mock Health Server for Testing
+
+If you want to test the health check script locally, you can run a simple mock server that returns a JSON health response.
+
+### 1. Install Flask (if not already installed)
+
+```bash
+pip install flask
+```
+
+### 2. Create a file called `mock_health_server.py` with the following content:
+
+```python
+from flask import Flask, jsonify
+
+app = Flask(__name__)
+
+@app.route('/health')
+def health():
+    return jsonify({
+        "status": "error",
+        "database": "unhealthy"
+    }), 500
+
+if __name__ == '__main__':
+    app.run(port=5000)
+```
+
+### 3. Run the mock server
+
+```bash
+python mock_health_server.py
+```
+
+### 4. Set your `HEALTH_ENDPOINT` in `.env` or `config.env` to:
+
+```
+HEALTH_ENDPOINT=http://localhost:5000/health
+```
 
 ---
 
@@ -116,7 +158,7 @@ docker run --env-file config.env health-check
 
 ## 🔧 Extending Functionality
 
-You can enhance this system further:
+Future enhancement based on bandwidth
 
 * ✅ Replace the mock `send_alert()` with:
 
@@ -130,20 +172,6 @@ You can enhance this system further:
   * CloudWatch
 * 🌍 Support multiple endpoints using a list + `asyncio.gather()`
 * 🧪 Add unit tests for alerting, retry logic, and JSON parsing
-
----
-
-## 🧪 Example `/health` Endpoint Payload
-
-```json
-{
-  "status": "ok",
-  "database": "healthy",
-  "cache": "healthy"
-}
-```
-
-The script will alert if any of these are `"unhealthy"`.
 
 ---
 

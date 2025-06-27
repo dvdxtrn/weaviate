@@ -1,3 +1,3 @@
 def send_alert(message):
-    # Simulate sending an email or Slack notification
+    # Printing an alert for now, can simulate sending an email or Slack notification
     print(f"[ALERT] {message}")
