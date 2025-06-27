@@ -121,16 +121,3 @@ weaviate_storage_size       = "50Gi"
 * [Weaviate Helm Chart](https://artifacthub.io/packages/helm/weaviate/weaviate)
 * [Terraform Helm Provider Docs](https://registry.terraform.io/providers/hashicorp/helm/latest/docs)
 * [Terraform Kubernetes Provider Docs](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs)
-
----
-
-## 🧑‍💻 Maintainers
-
-This project was bootstrapped as an SRE-ready solution to deploy Weaviate with production-level quality and modularity.
-
-```
-
----
-
-Would you like a badge section for CI/CD or versioning added to the README?
-```
