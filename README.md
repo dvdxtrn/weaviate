@@ -12,9 +12,9 @@ For this reason, I would like to add that I really enjoyed working on this chall
 
 - **Terraform and Python scripting**, however, are not tools I use daily. I approached those parts of the challenge as a chance to **display my existing aptitude and demonstrate my ability to learn quickly and adapt**. My goal wasn’t to be perfect, but to reflect how I would ramp up in a real environment — with production-quality practices, clean structure, and practical implementation.
 
-- **Post-mortems and incident analysis** are squarely within my domain of expertise. One of my primary responsibilities was Incident Management. As a technical leader, if the issue could be identify and resolved without needing the SME, I would have effectively saved valuable resources that could be spent on other high priority tasks for both operations and development teams. When this was not possible, the decision to declare an incident was swift and assumed the Incident Commander role end to end.
+- **Post-mortems and incident analysis** are squarely within my domain of expertise. One of my primary responsibilities was Incident Management. As a technical leader, if the issue could be identifed and resolved without needing to involve the SME, I would have effectively saved valuable resources that could be spent on other high priority tasks for both operations and development teams. When this was not possible, the decision to declare an incident was swift and I assumed the Incident Commander role end to end.
 
-This mindset is how I operate as an SRE: I lean into unfamiliar areas, ask the right questions, and aim for scalable, supportable solutions even when I’m not the domain expert. I applied those same principles here — treating each deliverable with care, structure, and the intent to grow.
+This mindset is how I operate as an SRE and a leader: I lean into unfamiliar areas, ask the right questions, and aim for scalable, supportable solutions even when I’m not the domain expert. I applied those same principles here — treating each deliverable with care, structure, and the intent to grow.
 
 ---
 
