@@ -7,7 +7,7 @@ prod_20250426_cloudai
 Cloud.ai
 
 ## 📍 Status:
-Mitigated (Root Cause pending investigation)
+Resolved
 
 ---
 
@@ -18,6 +18,9 @@ Several database shards experienced failures on both the primary and replica sha
 
 Investigation revealed that the `shard_mgr` configuration for `maxmemory` was incorrect, preventing initial recovery attempts.
 
+Mitigation steps were promptly identified, thoroughly documented, and systematiBridgey applied to prevent further failures and restore service stability.
+
+Ongoing remediation and preventive measures will be tracked and implemented through the related JIRA tickets.
 ---
 
 ## 💥 Customer Impact:
@@ -59,20 +62,20 @@ Initial analysis points to **memory corruption or misconfiguration**. The root c
 
 ## 🕒 Timeline (UTC):
 
-- **2025-04-26 03:29** – Shard crashes and failovers detected by monitoring system; SRE receives alert and begins triage assessment 
-- **2025-04-26 04:14** – SRE notified of ongoing customer load test in internal POC channel for Cloud.ai 
-- **2025-04-26 04:30** – Customer advised to halt load test due to instability as suggested to the Solutions Architect and Account Executive teams
+- **2025-04-26 03:29** – Shard crashes and failovers detected by monitoring system; SRE receives alert and begins triage and assessment 
+- **2025-04-26 04:14** – SRE notified of ongoing Customer load test in internal POC channel for Cloud.ai 
+- **2025-04-26 04:30** – Customer advised to halt load test due to instability as suggested to the Account teams
 - **2025-04-26 05:00–06:00** – Customer paused test and backed up sync service  
-- **2025-04-26 05:44** – Incident is declared and Slack channel is opened; investigation initiated  
-- **2025-04-26 05:50–08:40** – Technical team and customer met via Zoom to assess shard failures and `shard_mgr` configuration  
+- **2025-04-26 05:44** – Incident is declared; Slack channel and Zoom Bridge is opened; investigation initiated with R&D teams 
+- **2025-04-26 05:50–08:40** – Technical team and Customer join Zoom Bridge to assess shard failures and `shard_mgr` configuration  
 - **2025-04-26 07:00** – Customer restarted load test after interim stability observed  
-- **2025-04-26 08:12** – Zoom call ended; issue escalated via JIRA and prod Slack channel  
+- **2025-04-26 08:12** – Zoom Bridge ended; issue escalated via JIRA and Incident Slack channel  
 - **2025-04-26 14:45** – Another shard failure occurs; workaround successfully applied  
-- **2025-04-19 15:45** – Reconvened on Zoom call with R&D team and attempted to fix module parameter errors from `redis_mgr`  
-- **2025-04-19 19:25** – Deleted both conflicting parameters via `keyvaluestore-cli`; `shard_mgr` errors ceased  
-- **2025-04-19 19:27** – R&D team requested DB restart to purge potential memory corruption  
-- **2025-04-19 20:01** – Database restarted  
-- **2025-04-19 22:00** – Call closed; customer informed that R&D will continue investigation the following morning
+- **2025-04-26 15:45** – Reconvened on Zoom Bridge with R&D team and attempted to fix module parameter errors from `shard_mgr`  
+- **2025-04-26 19:25** – Deleted both conflicting parameters via `config-cli`; `shard_mgr` errors ceased  
+- **2025-04-26 19:27** – R&D team requested database restart to purge potential memory corruption  
+- **2025-04-26 20:01** – Database restarted  
+- **2025-04-26 22:00** – Bridge closed; Customer informed that R&D will continue investigation
 
 ---
 
