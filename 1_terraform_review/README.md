@@ -1,6 +1,6 @@
 # 🚀 Terraform EKS Weaviate Deployment
 
-This project automates the deployment of a **Weaviate vector database** on **Amazon EKS (Elastic Kubernetes Service)** cluster using **Terraform** and **Helm**. It provides a scalable, highly available, and repeatable infrastructure setup that can be reused across environments like `dev`, `staging`, or `prod`.
+This section of the challenge automates the deployment of a **Weaviate vector database** on **Amazon EKS (Elastic Kubernetes Service)** cluster using **Terraform** and **Helm**. It provides a scalable, highly available, and repeatable infrastructure setup that can be reused across environments like `dev`, `staging`, or `prod`.
 
 ---
 
@@ -40,9 +40,7 @@ This project automates the deployment of a **Weaviate vector database** on **Ama
 
 * Terraform >= 1.3.0
 * AWS CLI with access to EKS
-* Existing EKS cluster
 * Helm installed (for local validation, optional)
-* kubectl configured (optional for verification)
 
 ---
 
