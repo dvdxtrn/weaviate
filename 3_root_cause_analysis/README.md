@@ -19,9 +19,7 @@ This is not a verbatim record of a real production issue. It is a carefully anon
 
 ## 📄 Contents
 
-- `postmortem.md` – Full incident summary in structured format  
-- `timeline.md` – Chronological log of key events and decisions  
-- `action_items.md` – Follow-up and long-term remediation steps  
+- `postmortem.md` – Full incident summary in structured format
 
 ---
 
