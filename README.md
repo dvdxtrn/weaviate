@@ -8,9 +8,9 @@ The technical challenge spans three areas — Terraform review, a coding automat
 
 Each represent an area of my experience beginning from familiarity to proficiency and ultimately expertise. 
 
-For this reason, I would like to add that I really enjoyed working on this challenge and the thought and care going into its design.
+For this reason, I would like to add that I really enjoyed working on this challenge and appreciate the thought and care that went into its design.
 
-- **Post-mortems and incident analysis** are squarely within my domain of experience. I've written dozens of them in real-world, high-pressure environments and led the communication during critical incidents. That experience is directly represented in the report I created.
+- **Post-mortems and incident analysis** are squarely within my domain of expertise. One of my primary responsibilities was Incident Management. As a technical leader, if the issue could be identify and resolved without needing the SME, I would have effectively saved valuable resources that could be spent on other high priority tasks for both operations and development teams. When this was not possible, the decision to declare an incident was swift and assumed the Incident Commander role end to end.
   
 - **Terraform and Python scripting**, however, are not tools I use daily. I approached those parts of the challenge as a chance to **demonstrate my ability to learn quickly and adapt**. My goal wasn’t to be perfect, but to reflect how I would ramp up in a real environment — with production-quality practices, clean structure, and practical implementation.
 

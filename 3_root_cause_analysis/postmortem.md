@@ -7,12 +7,16 @@ prod_20250426_cloudai
 Cloud.ai
 
 ## 📍 Status:
-Resolved (initial mitigation complete, root cause under investigation)
+Mitigated (Root Cause pending investigation)
 
 ---
 
 ## 🗒️ Incident Summary:
-During customer load testing on April 26, 2025, multiple shard crashes and failovers occurred, resulting in service instability ahead of the customer’s planned go-live. Several shards entered a stuck `statemachine` state and could not recover due to an AOF (Append Only File) restore blocker. Investigation revealed that the `db_mgr` configuration for `maxmemory` was incorrect, preventing recovery.
+During customer load testing on April 26, 2025, multiple shard crashes and failovers occurred, resulting in service instability ahead of the customer’s planned go-live. 
+
+Several database shards entered a stuck `statemachine` state and could not recover due to an AOF (Append Only File) restore blocker. 
+
+Investigation revealed that the `shard_mgr` configuration for `maxmemory` was incorrect, preventing recovery.
 
 ---
 
