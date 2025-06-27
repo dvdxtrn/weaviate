@@ -22,7 +22,7 @@ This mindset is how I operate as an SRE: I lean into unfamiliar areas, ask the r
 
 ### 1. 🔍 Terraform Code Review
 
-File: [`terraform_review.md`](./terraform_review.md)
+File: [`README.md`](./1_terraform_review/README.md)
 
 I reviewed the provided Terraform code with a focus on:
 
@@ -37,7 +37,7 @@ My suggestions are documented clearly with justification and practical improveme
 
 #### 🧠 Thought Process
 
-I approached the Terraform review exactly as I would if it were assigned to me to complete as an engineer. This area of expertise was not in my daily usage, so I relied on AI to build on the fundamentals that I understand and sharpen it in the interest of time. If there was no time pressure, I approach with trial and error method in a testing environment to successfully provision the environment and then begin to refactor, improve, and find the best practices for reliability.
+I approached the Terraform review exactly as if a new and unfamiliar task was assigned to me to complete as an Senior Cloud Operations Engineer. This area of expertise was not in my daily usage, so I relied on AI to build on the fundamentals that I understand and sharpen it in the interest of time. If there was no time pressure, I would approach with trial and error method in a testing environment to successfully provision the environment and then begin to refactor, improve, and find the best practices for reliability.
 
 
 ---
@@ -72,15 +72,15 @@ I approached the Terraform review exactly as I would if it were assigned to me t
 
 ##### ✅ Summary
 
-This section reflects how I conduct infrastructure reviews in real workflows — focusing on quality, maintainability, and team alignment. My detailed comments and suggestions are documented in `terraform_review.md` and follow the same bar I hold for production infrastructure in my day-to-day responsibilities.
+This section reflects how I conduct infrastructure reviews in real workflows — focusing on quality, maintainability, and team alignment. My detailed comments and suggestions are documented in [`README.md`](./1_terraform_review/README.md) and follow the same bar I hold for production infrastructure in my day-to-day responsibilities.
 
 ---
 
 ### 2. 💻 Coding Challenge: Automated Health Check System
 
-Directory: [`healthcheck/`](./healthcheck/)
+File: [`README.md`](./2_health_check_coding/README.md)
 
-A Python script that performs automated health checks against a web application's endpoint. It measures response time, checks status codes, and logs errors with mock alerting capability.
+A Python script that performs automated health checks against a web application's endpoint. It measures response time, checks status codes, and logs errors with mock alerting capability. See the implementation and details in [`2_health_check_coding/`](./2_health_check_coding/).
 
 #### Features
 
@@ -92,13 +92,10 @@ A Python script that performs automated health checks against a web application'
 
 ---
 
-## ⚙️ Configuration
+### 3. 📝 Root Cause Analysis & Post-Mortem
 
-All configurable values are stored in `.env`:
+File: [`README.md`](./3_post_mortem/README.md)
 
-```env
-HEALTHCHECK_URL=https://your-app.com/health
-CHECK_INTERVAL=300
-RESPONSE_THRESHOLD=3
-RETRY_COUNT=2
-ALERT_CHANNEL=console
+This section contains a detailed root cause analysis and post-mortem report for the provided incident scenario. I break down the timeline, contributing factors, detection, mitigation steps, and actionable recommendations for future prevention.
+
+See the full analysis and lessons learned in [`3_post_mortem/README.md`](./3_post_mortem/README.md).
