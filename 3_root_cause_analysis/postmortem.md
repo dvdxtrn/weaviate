@@ -12,15 +12,16 @@ Mitigated (Root Cause pending investigation)
 ---
 
 ## 🗒️ Incident Summary:
-During customer load testing on April 26, 2025, multiple shard crashes and failovers occurred, resulting in service instability ahead of the customer’s planned go-live. 
+Cloud.ai initiated load testing on their custom-tuned and provisioned environment on April 26, 2025. The complex workloads caused multiple shards to crash into an ERROR state and failovers to the replica shards occurred. This resulted in service instability ahead of the customer’s planned go-live.
 
-Several database shards entered a stuck `statemachine` state and could not recover due to an AOF (Append Only File) restore blocker. 
+Several database shards experienced failures on both the primary and replica shards. Auto-recovery processes entered a stuck `active-change-pending` state and could not recover using the AOF (Append Only File) and required manual intervention to restore the shard health and preload from the persistence files.
 
-Investigation revealed that the `shard_mgr` configuration for `maxmemory` was incorrect, preventing recovery.
+Investigation revealed that the `shard_mgr` configuration for `maxmemory` was incorrect, preventing initial recovery attempts.
 
 ---
 
 ## 💥 Customer Impact:
+- Assessed as SEV2 / P2) Impact: Significant degradation, partial outage
 - Continuous shard crashes disrupted load testing
 - Stability risks ahead of production go-live
 - Manual intervention required to restore service
@@ -32,7 +33,7 @@ Investigation revealed that the `shard_mgr` configuration for `maxmemory` was in
 
 ### Failures:
 - The following shards experienced crashes and failovers: `shard:43`, `shard:39`, `shard:22`, `shard:21`, `shard:40`.
-- Shards were stuck in a `statemachine` state post-crash, unable to self-recover.
+- Shards were stuck in a `active-change-pending` state post-crash, unable to self-recover.
 
 ### AOF Restore Blocker:
 - Attempts to restore from AOF files were blocked due to incorrect `maxmemory` settings by `shard_mgr`.
@@ -44,7 +45,7 @@ Investigation revealed that the `shard_mgr` configuration for `maxmemory` was in
 
 1. Identified affected node and stopped the `shard_mgr` process.
 2. Preloaded the shard manually from backup (AOF).
-3. Released the shard from the `statemachine` state.
+3. Released the shard from the `active-change-pending` state.
 4. Restarted the shard manually.
 5. Validated that the shard was restored and functioning.
 
@@ -91,7 +92,7 @@ Initial analysis points to **memory corruption or misconfiguration**. The root c
 
 ### 🔍 Near Term
 - [ ] Validate `maxmemory` auto-tuning behavior across all environments
-- [ ] Strengthen shard failover alerting and statemachine detection
+- [ ] Strengthen shard failover alerting and active-change-pending detection
 - [ ] Add automated fallback on restore blockers
 
 ### 📚 Long Term
