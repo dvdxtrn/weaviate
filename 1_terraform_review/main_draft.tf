@@ -6,7 +6,6 @@
 provider "aws" {
   version = "~> 5.0" # Pin version for consistent behavior
   region  = var.region
-
   default_tags {
     tags = local.aws_default_tags
   }
@@ -58,6 +57,9 @@ locals {
 
   # Derive customer identifier by removing prefix
   # This logic assumes all clusters are prefixed with 'wv-' — may need to generalize
+  #    Hardcoded prefix "wv-" makes this logic brittle.
+  #    If cluster naming changes (e.g., to "dev-" or "corp-"), this will silently fail or return incorrect identifiers.
+  #    Consider replacing with a configurable variable or regex-based parser for better flexibility.
   customer_identifier = trimprefix(var.eks_cluster_name, "wv-")
 
   # If this value will change per environment, convert to a variable
