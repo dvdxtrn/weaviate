@@ -10,7 +10,7 @@ Each represent an area of my experience ranging from familiarity to proficiency 
 
 For this reason, I would like to add that I really enjoyed working on this challenge and appreciate the thought and care that went into its design.
 
-- **Terraform and Python scripting**, however, are not tools I use daily. I approached those parts of the challenge as a chance to **display my existing aptitude and demonstrate my ability to learn quickly and adapt**. My goal wasn’t to be perfect, but to reflect how I would ramp up in a real environment — with production-quality practices, clean structure, and practical implementation.
+- **Terraform and Python scripting** are not tools I use daily. I approached those parts of the challenge as a chance to **display my existing aptitude and demonstrate my ability to learn quickly and adapt**. My goal wasn’t to be perfect, but to reflect how I would ramp up in a real environment — with production-quality practices, clean structure, and practical implementation.
 
 - **Post-mortems and incident analysis** are squarely within my domain of expertise. One of my primary responsibilities was Incident Management. As a technical leader, if the issue could be identifed and resolved without needing to involve the SME, I would have effectively saved valuable resources that could be spent on other high priority tasks for both operations and development teams. When this was not possible, the decision to declare an incident was swift and I assumed the Incident Commander role end to end.
 
