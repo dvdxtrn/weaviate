@@ -54,7 +54,13 @@ locals {
 }
 
 ################################################################################
-# Kubernetes Namespace
+# EKS Cluster and VPC Configuration
+################################################################################
+
+# (Intentionally omitted for this exercise; assumed provisioned externally)
+
+################################################################################
+# Kubernetes Namespace for Weaviate
 ################################################################################
 
 resource "kubernetes_namespace" "weaviate-namespace" {
@@ -72,7 +78,7 @@ resource "kubernetes_namespace" "weaviate-namespace" {
 }
 
 ################################################################################
-# Weaviate Helm Deployment Module
+# High Availability Setup for Weaviate
 ################################################################################
 
 module "weaviate_helm" {
@@ -129,3 +135,13 @@ module "weaviate_helm" {
     kubernetes_namespace.weaviate-namespace
   ]
 }
+
+################################################################################
+# Additional Modules and Resources
+################################################################################
+
+# You may wish to include the following modules based on production needs:
+# - ALB Ingress Controller for external access
+# - External DNS and Cert Manager for DNS/SSL automation
+# - Prometheus/Grafana for observability
+# - CloudWatch log groups or FluentBit for log forwarding
