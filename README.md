@@ -57,7 +57,7 @@ A Python script that performs automated health checks against a web application'
 
 Observability was a key focus of mine as the SME of Zabbix (open source). Zabbix was used to monitor all of production VMs on the system level while Prometheus/Grafana was used for the database and service level. 
 
-As I deeply understood the limitations of Zabbix, Chronosphere and Observe.inc proof of concept completed ZIP approval processes were set to begin prior to my departure from Redis.
+As I deeply understood the limitations of Zabbix, Chronosphere and Observe.inc proof of concepts completed ZIP approval processes and were set to begin prior to my departure from Redis.
 
 I am proficient with Python and other languages as part of automating tasks and reports. With my observability already on my mind and the need to convert existing scripts in Zabbix to work with Cloud Native platforms, this gave me an opportunity to find closure to my unfinished work.
 
@@ -77,4 +77,4 @@ To reduce the cognitive and operational overhead on the team, I **spearheaded a 
 
 It's successful deployment required **cross-functional buy-in from many Support and Development teams** to fully adopt. I led efforts to ensure their **on-call rotations and schedules were integrated into the system**, eliminating the need for outdated processes like **Excel-based paging and manual escalations**. As a result, teams could rely on a centralized, reliable, and automated escalation workflow during incidents.
 
-The tool was successfully launched following a comprehensive rollout, which included cross-functional presentations to the relevant teams along with full training, documentation, and user enablement.
+The tool was successfully launched following a comprehensive rollout, which included presentations to introduce the tool to the relevant teams along with full training, documentation, and user enablement.
