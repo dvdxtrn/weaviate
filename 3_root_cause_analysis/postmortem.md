@@ -18,7 +18,7 @@ Several database shards experienced failures on both the primary and replica sha
 
 Investigation revealed that the `shard_mgr` configuration for `maxmemory` was incorrect, preventing initial recovery attempts.
 
-Mitigation steps were promptly identified, thoroughly documented, and systematiBridgey applied to prevent further failures and restore service stability.
+Mitigation steps were promptly identified, thoroughly documented, and systematically applied to prevent further failures and restore service stability.
 
 Ongoing remediation and preventive measures will be tracked and implemented through the related JIRA tickets.
 ---
